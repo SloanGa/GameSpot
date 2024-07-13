@@ -1,0 +1,20 @@
+{
+    "include": ["./src", "src/routes/routes.ts"],
+    "compilerOptions": {
+      "incremental": true,
+      "target": "ES6",
+      "module": "CommonJS",
+      "resolveJsonModule": true, // To import Json module
+      "sourceMap": true,
+      "outDir": "./dist",
+      "removeComments": true,
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    }
+  }
