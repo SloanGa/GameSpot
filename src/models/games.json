@@ -3,19 +3,22 @@
     "name": "guessNumber",
     "title": "Guess The Number",
     "cssFile": "guessNumber.css",
-    "jsFile": "guessNumber.js"
+    "jsFile": "guessNumber.js",
+    "description" : "Ici la description du jeux"
   },
   {
     "name": "diceRoller",
     "title": "Dice Roller",
     "cssFile": "diceRoller.css",
-    "jsFile": "diceRoller.js"
+    "jsFile": "diceRoller.js",
+    "description" : "Ici la description du jeux"
   },
   {
     "name": "invader",
     "title": "Invader",
     "cssFile": "invader.css",
-    "jsFile": "invader.js"
+    "jsFile": "invader.js",
+    "description" : "Ici la description du jeux"
   }
 ]
 

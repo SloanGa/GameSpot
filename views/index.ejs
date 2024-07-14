@@ -9,38 +9,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
-  <% if(!game){ %>
-    <link rel="stylesheet" href="/css/style.css" />
-    <% } %>
-
-      <% if(game && game.cssFile !==null){ %>
-        <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
-        <% } %>
-
-          <% if(status===404){ %>
-            <link rel="stylesheet" href="/css/404.css" />
-            <% } %>
-
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-      <h1 class="header__title"><a class="header__link" href="/">GameHub</a></h1>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <% games.forEach((game)=> { %>
-            <li><a class="header__element" href="/game/<%=game.name%>">
-                <%=game.title%>
-              </a></li>
-            <%})%>
-        </ul>
+      <h1 class="header__title"><a class="header__link" href="/">GameSpot</a></h1>
       </nav>
     </header>
 
     <main class="main">
-      <h3 class="main__title">Bienvenue sur GameHub</h3>
+      <h2 class="main__title">Nos Jeux</h2>
+      <div class="cards">
+        <% games.forEach((game)=> { %>
+          <a class="card" href="/game/<%= game.name %>">
+            <img class="card__img" src="/images/logo.jpg" alt="">
+            <h3>
+              <%= game.title %>
+            </h3>
+            <p>
+              <%= game.description %>
+            </p>
+          </a>
+          <% }) %>
+
+      </div>
+
+
     </main>
   </div>
 </body>
