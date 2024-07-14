@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>GameHub</title>
-    <link rel="stylesheet" href="/css/output.css">
+    <title class="">GameSpot</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <% if(game && game.cssFile !==null){ %>
         <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
         <% } %>
@@ -16,16 +21,16 @@
 </head>
 
 <body>
-    <header>
-        <h1>GameHub</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <% games.forEach((game)=> { %>
-                    <li><a href="/game/<%=game.name%>">
-                            <%=game.title%>
-                        </a></li>
-                    <%})%>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">GameHub</h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <% games.forEach((game)=> { %>
+                        <li><a class="header__element" href="/game/<%=game.name%>">
+                                <%=game.title%>
+                            </a></li>
+                        <%})%>
+                </ul>
+            </nav>
+        </header>

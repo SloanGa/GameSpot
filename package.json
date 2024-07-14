@@ -1,11 +1,13 @@
 {
-  "name": "s06e02-atelier-gamehub-sloanga",
+  "name": "gamespot",
   "version": "1.0.0",
-  "description": "Bon, on a quelques jeux qui traînent, c'est cool ! Mais c'est le bazar !",
-  "main": "gameHub.js",
+  "description": "",
+  "main": "./dist/gameSpot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dist/gameHub.js"
+    "start": "nodemon",
+    "build-css": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
+    "build": "tsc -w"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,8 @@
   "dependencies": {
     "@types/express": "^4.17.21",
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.4"
