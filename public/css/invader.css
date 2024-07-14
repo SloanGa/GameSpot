@@ -14,7 +14,7 @@ body {
 }
 .configuration {
   height: 200px;
-  background: #3148ad;
+  background: #5a52c5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,4 +95,95 @@ body {
 
 .orange {
   background: orange !important;
+}
+
+/*  */
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.header,
+.main {
+  height: 100vh;
+}
+
+.header {
+  background: #05a696;
+}
+
+.header__title {
+  font-size: 3rem;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__link {
+  color: white;
+}
+
+.header__nav {
+  height: 70%;
+}
+
+.header__list {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header__element {
+  font-size: 1.5rem;
+  color: white;
+  height: 4rem;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__element:hover {
+  background: white;
+  color: #05a696;
+}
+
+.main__title {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header,
+  .main {
+    height: auto;
+  }
+
+  .header__title {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  .header__list {
+    margin: 60px, 0;
+  }
+
+  .header__element {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }

@@ -1,9 +1,9 @@
 [
   {
-    "name": "fourchette",
-    "title": "Jeu de la fourchette",
-    "cssFile": null,
-    "jsFile": "fourchette.js"
+    "name": "guessNumber",
+    "title": "Guess The Number",
+    "cssFile": "guessNumber.css",
+    "jsFile": "guessNumber.js"
   },
   {
     "name": "diceRoller",

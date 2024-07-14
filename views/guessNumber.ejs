@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title class="">GameHub</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <% if(!game){ %>
+    <link rel="stylesheet" href="/css/style.css" />
+    <% } %>
+
+      <% if(game){ %>
+        <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
+        <% } %>
+
+          <% if(status===404){ %>
+            <link rel="stylesheet" href="/css/404.css" />
+            <% } %>
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title"><a class="header__link" href="/">GameHub</a></h1>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <% games.forEach((game)=> { %>
+            <li><a class="header__element" href="/game/<%=game.name%>">
+                <%=game.title%>
+              </a></li>
+            <%})%>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h1 id="menu">GUESS THE NUMBER</h1>
+      <div id="restart">
+        <button>Recommencer</button>
+      </div>
+      <div id="showAnswerContainer">
+        <h2>Nombres déjà essayés</h2>
+        <div class="showAnswer"></div>
+      </div>
+      <div id="Game">
+        <div id="initGameContainer">
+          <p>
+            Le but du jeux est de deviner LE nombre qui sera générer
+            aléatoirement. Tu devras le trouver en effectuant le moins de coups
+            possible.
+            <br />
+            <br />
+            Alors ? Prêt ?
+          </p>
+          <!-- <button id="start">Guess the number</button> -->
+        </div>
+        <div id="level">
+          <div id="level1">
+            <button>
+              Facile<br />
+              1 à 50
+            </button>
+          </div>
+          <div id="level2">
+            <button>
+              Intermediraire<br />
+              1 à 200
+            </button>
+          </div>
+          <div id="level3">
+            <button>Difficile<br />1 à 500</button>
+          </div>
+          <div id="level4">
+            <button>Cauchemardesque<br />1 à 1000</button>
+          </div>
+        </div>
+
+        <div id="startGameContainer">
+          <p class="explain"></p>
+
+          <div id="score">Score :</div>
+          <div class="number">
+            <label for="number">Ton choix</label>
+            <input type="text" name="number" id="number" placeholder="Ex : 50" />
+          </div>
+          <div class="btnContainer">
+            <button id="try">Essayer !</button>
+          </div>
+
+          <div id="displayResponsContainer">
+            <div id="displayResponsText">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+    </main>
+  </div>
+
+  <script src="/js/guessNumber.js"></script>
+  </div>
+</body>
+
+</html>
