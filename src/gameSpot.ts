@@ -1,4 +1,5 @@
 import express from "express";
+import { join } from "path";
 
 const app = express();
 
@@ -9,9 +10,9 @@ import { createManageErrors } from "./middlewares/errors.middleware";
 import games from "./models/games.json";
 import router from "./routes/routes";
 
-app.set("views", "./views");
+app.set("views", join(__dirname.replace(/\\dist$/, ""), "views"));
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static(join(__dirname.replace(/\\dist$/, ""), "public")));
 app.use(logging);
 
 const locals = createLocals(app, games);
