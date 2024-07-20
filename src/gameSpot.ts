@@ -3,7 +3,7 @@ import { join } from "path";
 
 const app = express();
 
-import { logging } from "./middlewares/logging.middleware";
+// import { logging } from "./middlewares/logging.middleware";
 import { createLocals } from "./middlewares/locals.middleware";
 import { createManageErrors } from "./middlewares/errors.middleware";
 
@@ -13,7 +13,7 @@ import router from "./routes/routes";
 app.set("views", join(__dirname.replace(/\\dist$/, ""), "views"));
 app.set("view engine", "ejs");
 app.use(express.static(join(__dirname.replace(/\\dist$/, ""), "public")));
-app.use(logging);
+// app.use(logging);
 
 const locals = createLocals(app, games);
 app.use(locals);
