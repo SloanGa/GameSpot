@@ -19,7 +19,6 @@
     "typescript": "^5.5.3"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.4",
     "nodemon": "^3.1.4",
     "ts-watch": "^1.0.8"
   }

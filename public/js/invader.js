@@ -2,38 +2,26 @@ const app = {
   invaderContainer: document.querySelector("#invader"),
   pixelsContainer: document.createElement("div"),
   eachPixels: [],
-  button: "",
   gridValue: 0,
   pixelValue: 0,
   colorPallet: document.querySelectorAll(".color"),
+  inputGrid: document.querySelector("#grid"),
+  inputPixel: document.querySelector("#pixel"),
+  inputColor: document.querySelector(".inputcolor"),
+  button: document.querySelector(".btn"),
+  color: "",
 
   // Create form
   init: () => {
-    const inputGrid = document.createElement("input");
-    inputGrid.classList.add("input-field");
-    inputGrid.placeholder = "Taille de la grille";
-
-    const inputPixel = document.createElement("input");
-    inputPixel.classList.add("input-field");
-    inputPixel.placeholder = "Taille de pixels";
-
-    app.button = document.createElement("button");
-    app.button.classList.add("btn");
-    app.button.textContent = "Valider";
-
-    const formContainer = document.querySelector(".configuration");
-    formContainer.appendChild(inputGrid);
-    formContainer.appendChild(inputPixel);
-    formContainer.appendChild(app.button);
-
     // Create pixel container
     app.pixelsContainer.setAttribute("id", "pixelContainer");
     app.invaderContainer.appendChild(app.pixelsContainer);
-    inputGrid.addEventListener("input", (e) => {
+
+    app.inputGrid.addEventListener("input", (e) => {
       app.gridValue = e.target.value;
     });
 
-    inputPixel.addEventListener("input", (e) => {
+    app.inputPixel.addEventListener("input", (e) => {
       app.pixelValue = e.target.value;
     });
 
@@ -60,15 +48,17 @@ const app = {
     app.eachPixels = document.querySelectorAll("#pixelsElement");
 
     // allow choose color
-    let colorId;
-    app.colorPallet.forEach((color) => {
-      color.addEventListener("click", (e) => {
-        colorId = e.target.id;
-      });
-      app.eachPixels.forEach((pixel) => {
-        pixel.addEventListener("click", (e) => {
-          pixel.className = colorId;
-        });
+
+    app.inputColor.addEventListener("input", (e) => {
+      setTimeout(() => {
+        app.color = app.inputColor.value;
+        console.log(app.color);
+      }, 1000);
+    });
+
+    app.eachPixels.forEach((pixel) => {
+      pixel.addEventListener("click", (e) => {
+        pixel.style.backgroundColor = app.color;
       });
     });
   },

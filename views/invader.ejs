@@ -1,14 +1,49 @@
-<%- include('./partials/header') %>
-    <form class="configuration"></form>
-    <div id="invader"></div>
-    <div class="colorPalet">
-        <div class="color white" id="white"></div>
-        <div class="color black" id="black"></div>
-        <div class="color orange" id="orange"></div>
-        <div class="color green" id="green"></div>
-    </div>
-    <script src="/js/invader.js"></script>
-    </div>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
 
-    </html>
+<head>
+  <script src="https://kit.fontawesome.com/090d5fde99.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="">Invader | Pixel Art</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/dice/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/dice/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/dice/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="/site.webmanifest"> -->
+
+
+
+  <% if(game && game.cssFile !==null){ %>
+  <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
+  <% } %>
+
+  <% if(status===404){ %>
+  <link rel="stylesheet" href="/css/404.css" />
+  <% } %>
+
+</head>
+
+<body>
+  <a href="/"><i id="return" class="fa-solid fa-house fa-xl"></i></a>
+  <div class="container">
+
+    <form class="configuration">
+      <input type="number" id="grid" min="1" class="input-field" placeholder="Taille de la grille (Mobile : Max 20 conseillé)">
+      <input type="number" id="pixel" min='10' class="input-field" placeholder="Taille des pixels (Mobile : Max 15 conseillé)">
+      <button class="btn">Valider</button>
+    </form>
+    <div id="invader"></div>
+
+    <div class="colorPalet">
+      <input type="color" class="inputcolor color">
+    </div>
+    <script src="../js/invader.js"></script>
+  </div>
+</body>
+
+</html>
