@@ -3,64 +3,40 @@
 
 <head>
   <meta charset="UTF-8">
-  <title class="">GameHub</title>
+  <title class="">DiceRoller | Jeu du Lanceur de Dés</title>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="dices.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/090d5fde99.js" crossorigin="anonymous"></script>
 
-  <% if(!game){ %>
-    <link rel="stylesheet" href="/css/style.css" />
-    <% } %>
+  <% if(game && game.cssFile !==null){ %>
+  <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
+  <% } %>
 
-      <% if(game && game.cssFile !==null){ %>
-        <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
-        <% } %>
-
-          <% if(status===404){ %>
-            <link rel="stylesheet" href="/css/404.css" />
-            <% } %>
+  <% if(status===404){ %>
+  <link rel="stylesheet" href="/css/404.css" />
+  <% } %>
 
 </head>
 
 <body>
-  <div class="container">
-    <header class="header">
-      <h1 class="header__title"><a class="header__link" href="/">GameHub</a></h1>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <% games.forEach((game)=> { %>
-            <li><a class="header__element" href="/game/<%=game.name%>">
-                <%=game.title%>
-              </a></li>
-            <%})%>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <h3>Dice Roller</h3>
+  <a href="/"><i id="return" class="fa-solid fa-house fa-xl"></i></a>
+  <div id="app">
+    <form class="form" action="">
+      <label class="label" for="dices">Combien de dés voulez-vous jouer ?</label>
+      <input id="dices" type="range" name="dices" min="1" value="10" max="20">
+      <div class="dices_value"></div>
+      <button id="play">Lancer !</button>
 
-      <div id="welcome">
-        <button id="play" class="btn" type="button">Jouer</button>
-      </div>
-      <div id="app" class="hidden">
-        <div class="form">
-          <form id="game-form">
-            <input type="range" id="dice-number-input" value="3" min="1" max="20">
-            <span id="dice-number">3</span>
-            <button class="btn">Valider le nombre de dés et lancer</button>
-          </form>
-        </div>
-        <div id="game">
-          <div class="board" id="player"></div>
-          <div class="board" id="dealer"></div>
-        </div>
-      </div>
-
-      <main class="main">
-        <script src="/js/diceRoller.js"></script>
+    </form>
+    <div class="board" id="player"></div>
+    <div class="board" id="dealer"></div>
   </div>
+  <div id="score"></div>
+  <script src="../js/diceRoller.js"></script>
 </body>
+
 
 </html>

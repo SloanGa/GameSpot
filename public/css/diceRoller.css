@@ -1,14 +1,14 @@
 body {
-  background-color: #ffae2b;
+  background: rgb(243, 156, 18);
+  background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
 }
 
 #app {
   display: flex;
-  flex-direction: column;
 }
 
 #player {
-  background-color: #ffae2b;
+  background-color: #f39c12;
 }
 
 #dealer {
@@ -16,25 +16,12 @@ body {
 }
 
 .board {
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   align-content: center;
-  position: relative;
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(0);
-  }
-  75% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 .dice {
@@ -42,184 +29,141 @@ body {
   width: 100px;
   height: 100px;
   margin: 1em;
-  animation: pop 0.4s ease 0s 1;
-}
-
-#welcome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6em;
-}
-
-/* id => pratique pour un getElementById, mais dans le css... */
-#app.hidden,
-#welcome.hidden {
-  display: none;
-}
-
-.btn {
-  padding: 1em 2em;
-  background: #fff;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  border-bottom: 4px solid #ad5304;
-}
-
-.btn:hover {
-  margin-top: 1px;
-  border-bottom-width: 3px;
-}
-
-#game {
-  display: flex;
 }
 
 .form {
-  height: 150px;
-  background: #111;
-}
-
-#game-form {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
-}
-
-#dice-number {
-  margin: 0.5em 0;
-  color: #fff;
-  font-weight: bold;
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.result {
+  gap: 12px;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-size: 3em;
-  padding: 0.3em 0;
-  text-align: center;
-  animation: fade 0.4s ease 0s 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 2rem;
 }
 
-.counter {
-  position: fixed;
-  top: 0;
-  left: 0;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 75vh;
-  text-shadow: 5px 5px 0 #000;
-}
-
-/*  */
-
-body {
-  font-family: Montserrat, sans-serif;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-
-.header,
-.main {
-  height: 100vh;
-}
-
-.header {
-  background: #a66806;
-}
-
-.header__title {
-  font-size: 3rem;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header__link {
+.label {
   color: white;
-}
-
-.header__nav {
-  height: 70%;
-}
-
-.header__list {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.header__element {
   font-size: 1.5rem;
-  color: white;
-  height: 4rem;
-  width: 80%;
-  margin: auto;
+}
+
+.buttonReplay {
+  position: absolute;
+  top: 800px;
+  border: 1px solid rgba(255, 255, 255, 0.199);
+  margin-top: 30px;
+  cursor: pointer;
+  width: 200px;
   padding: 5px;
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 7px;
+  transition: ease 10ms;
+  background: rgb(243, 156, 18);
+  background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
+}
+
+#play {
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 200px;
+  padding: 5px;
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 7px;
+  background: rgb(230, 126, 34);
+  background: linear-gradient(90deg, rgba(230, 126, 34, 1) 0%, rgba(230, 188, 34, 1) 100%);
+}
+
+.buttonReplay:hover {
+  background: rgb(230, 126, 34);
+  background: linear-gradient(90deg, rgba(230, 126, 34, 1) 0%, rgba(230, 188, 34, 1) 100%);
+  border: 1px solid transparent;
+}
+
+#play:hover {
+  border: 1px solid rgba(255, 255, 255, 0.199);
+  background: rgb(243, 156, 18);
+  background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
+}
+
+.dices_value {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#score {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.747);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background: rgb(243, 156, 18);
+  background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
 }
 
-.header__element:hover {
-  background: white;
-  color: #a66806;
+.scoreR {
+  position: absolute;
+  left: 25%;
+  top: 90%;
 }
 
-.main__title {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 5rem;
+.scoreL {
+  position: absolute;
+  right: 25%;
+  top: 90%;
 }
 
-@media screen and (max-width: 1000px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-  .header,
-  .main {
-    height: auto;
+#return {
+  color: white;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#return:hover {
+  scale: 1.3;
+}
+
+#dices {
+  background: #fffcc9;
+  border-radius: 8px;
+  height: 13px;
+  width: 70%;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .form {
+    top: 30px;
+    gap: 30px;
   }
 
-  .header__title {
-    padding-top: 20px;
-    padding-bottom: 5px;
+  .label,
+  .dices_value {
+    font-size: 1.7rem;
   }
 
-  .header__list {
-    margin: 60px, 0;
+  #play,
+  .buttonReplay {
+    font-size: 2.5rem;
+    background: rgb(230, 126, 34);
+    background: linear-gradient(90deg, rgba(230, 126, 34, 1) 0%, rgba(230, 188, 34, 1) 100%);
   }
 
-  .header__element {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  #play:hover {
+    background: rgb(230, 126, 34);
+    background: linear-gradient(90deg, rgba(230, 126, 34, 1) 0%, rgba(230, 188, 34, 1) 100%);
   }
-  .main__title {
+
+  #dices {
+    width: 100%;
+  }
+
+  .buttonReplay {
+    position: absolute;
+    top: 1300px;
   }
 }
