@@ -4,21 +4,21 @@
     "title": "Guess The Number",
     "cssFile": "guessNumber.css",
     "jsFile": "guessNumber.js",
-    "description" : "Ici la description du jeux"
+    "description" : "Essaye de deviner le nombre caché entre 1 et 100 ! Chaque tentative te dira si le nombre secret est plus grand ou plus petit. Peux-tu trouver le bon nombre en un minimum d'essais ?"
   },
   {
     "name": "diceRoller",
     "title": "Dice Roller",
     "cssFile": "diceRoller.css",
     "jsFile": "diceRoller.js",
-    "description" : "Ici la description du jeux"
+    "description" : "Lance les dés et découvre ton score ! Parfait pour les jeux de société, les RPG, ou juste pour le plaisir. Peux-tu obtenir le score le plus élevé ?"
   },
   {
     "name": "invader",
     "title": "Invader",
     "cssFile": "invader.css",
     "jsFile": "invader.js",
-    "description" : "Ici la description du jeux"
+    "description" : "Crée tes propres œuvres en pixel art ! Utilise ce tableau pour dessiner et donner vie à tes idées pixel par pixel. Amuse-toi et sois créatif !"
   }
 ]
 
