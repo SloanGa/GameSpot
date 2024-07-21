@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -5,18 +6,18 @@
 body {
   background: rgb(243, 156, 18);
   background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#menu {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 10px;
+  color: white;
 }
 
 #app {
   display: flex;
-}
-
-#player {
-  background-color: #f39c12;
-}
-
-#dealer {
-  background-color: #e67e22;
 }
 
 .board {
@@ -54,10 +55,7 @@ body {
 }
 
 .buttonReplay {
-  position: absolute;
-  top: 800px;
   border: 1px solid rgba(255, 255, 255, 0.199);
-  margin-top: 30px;
   cursor: pointer;
   width: 200px;
   padding: 5px;
@@ -100,23 +98,24 @@ body {
 
 #score {
   font-size: 2rem;
-  color: rgba(255, 255, 255, 0.747);
+  padding-bottom: 20px;
+  width: 60%;
+  margin: auto;
+  color: rgba(255, 255, 255, 0.774);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: rgb(243, 156, 18);
   background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
 }
 
 .scoreR {
-  position: absolute;
+  position: relative;
   left: 25%;
-  top: 90%;
 }
 
 .scoreL {
-  position: absolute;
+  position: relative;
   right: 25%;
-  top: 90%;
 }
 
 #return {
@@ -140,13 +139,23 @@ body {
 }
 
 @media screen and (max-width: 1400px) {
+  #menu {
+    font-size: 2rem;
+  }
+
   .form {
     position: relative;
   }
 
   #app {
-    flex-direction: column;
+    flex-direction: row;
   }
+
+  .board {
+    width: 50%;
+    margin-top: 53%;
+  }
+
   .label,
   .dices_value {
     font-size: 1.4rem;
@@ -159,21 +168,15 @@ body {
     background: linear-gradient(90deg, rgba(230, 126, 34, 1) 0%, rgba(230, 188, 34, 1) 100%);
   }
 
-  #play:hover {
-    background: rgb(230, 126, 34);
-    background: linear-gradient(90deg, rgba(230, 126, 34, 1) 0%, rgba(230, 188, 34, 1) 100%);
-  }
-
   #dices {
     width: 50%;
   }
 
-  .buttonReplay {
-    position: absolute;
-    top: 1300px;
+  #return {
+    top: 25px;
   }
 
-  #return {
-    top: 70px;
+  #score {
+    font-size: 1.4rem;
   }
 }
