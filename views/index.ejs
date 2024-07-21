@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <title class="">GameHub</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/homeico/favico/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/homeico/favico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/homeico/favico/favicon-16x16.png">
-  <link rel="manifest" href="/homeico/site.webmanifest">
-</head>
+<%- include('partials/header') %>
 
 <body>
   <div class="container">
@@ -25,10 +13,10 @@
         <% games.forEach((game)=> { %>
         <a class="card" href="/game/<%= game.name %>">
           <div class="innerCard">
-            <img class="card__img" src="/images/logo.jpg" alt="">
             <h3>
               <%= game.title %>
             </h3>
+            <img class="card__img" src="<%= game.miniature %>" alt="">
           </div>
           <div class="flip-card-back <%=game.name%>Card">
             <p class="description"><%= game.description %></p>

@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <script src="https://kit.fontawesome.com/090d5fde99.js" crossorigin="anonymous"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title class="">Guess The Number | Devinette</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <% if(!game){ %>
-  <link rel="stylesheet" href="/css/style.css" />
-  <% } %>
-
-  <% if(game){ %>
-  <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
-  <% } %>
-
-  <% if(status===404){ %>
-  <link rel="stylesheet" href="/css/404.css" />
-  <% } %>
-
-</head>
+<%- include('partials/header') %>
 
 <body>
   <a href="/"><i id="return" class="fa-solid fa-house fa-xl"></i></a>

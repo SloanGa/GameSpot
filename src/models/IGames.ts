@@ -4,7 +4,9 @@
 
 export interface IGames {
   name: string;
+  titleCss: string;
   title: string;
   cssFile: string | null;
-  jsFile: string;
+  description: string;
+  miniature: string;
 }

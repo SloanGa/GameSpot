@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<body>
+  <h1 id="menu">PIXELIZE</h1>
+  <a href="/"><i id="return" class="fa-solid fa-house fa-xl"></i></a>
+  <div class="container">
+
+    <form class="configuration">
+      <input type="number" id="grid" min="1" class="input-field" placeholder="Taille de la grille (Mobile : Max 20 conseillé)">
+      <input type="number" id="pixel" min='10' class="input-field" placeholder="Taille des pixels (Mobile : Max 15 conseillé)">
+      <button class="btn">Valider</button>
+    </form>
+    <div id="invader"></div>
+
+    <div class="colorPalet">
+      <input type="color" class="inputcolor color">
+    </div>
+    <script src="../js/pixelize.js"></script>
+  </div>
+</body>
+
+</html>

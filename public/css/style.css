@@ -16,10 +16,10 @@ body {
 
 .main {
   background: white;
-  width: 70%;
+  width: 80%;
   margin: auto;
   border-radius: 3px;
-  height: 700px;
+  min-height: 700px;
   margin-top: 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -85,15 +85,17 @@ body {
 }
 
 .card__img {
-  height: 250px;
-  width: 242px;
+  height: 330px;
+  width: 85%;
+  margin-top: 15px;
+  border-radius: 7px;
 }
 .diceRollerCard {
   background: rgb(243, 156, 18);
   background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
 }
 
-.invaderCard {
+.pixelizeCard {
   background: #6459cd;
 }
 
@@ -105,4 +107,24 @@ body {
   padding: 40% 8px;
   color: rgb(255, 255, 255);
   line-height: 1.4;
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .main {
+    width: 90%;
+    padding-bottom: 30px;
+  }
+  .card {
+    width: 90%;
+  }
+
+  .card__img {
+    width: 90%;
+  }
 }

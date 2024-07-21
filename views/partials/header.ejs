@@ -2,39 +2,23 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title class="">GameHub</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <script src="https://kit.fontawesome.com/090d5fde99.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/reset.css">
 
-    <% if(!game){ %>
-        <link rel="stylesheet" href="/css/style.css" />
-        <% } %>
+  <% if(!game){ %>
+  <link rel="stylesheet" href="/css/style.css" />
+  <title class="">GameHub</title>
+  <% } %>
 
-            <% if(game && game.cssFile !==null){ %>
-                <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
-                <% } %>
+  <% if(game){ %>
+  <link rel="stylesheet" href="/css/<%=game.cssFile%>" />
+  <title class=""><%= game.titleCss %></title>
+  <% } %>
 
-                    <% if(status===404){ %>
-                        <link rel="stylesheet" href="/css/404.css" />
-                        <% } %>
+  <% if(status===404){ %>
+  <link rel="stylesheet" href="/css/404.css" />
+  <% } %>
 
 </head>
-
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="header__title"><a class="header__link" href="/">GameHub</a></h1>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <% games.forEach((game)=> { %>
-                        <li><a class="header__element" href="/game/<%=game.name%>">
-                                <%=game.title%>
-                            </a></li>
-                        <%})%>
-                </ul>
-            </nav>
-        </header>

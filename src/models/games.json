@@ -1,24 +1,27 @@
 [
   {
     "name": "guessNumber",
-    "title": "Guess The Number",
+    "titleCss": "Guess The Number | Devinette",
+    "title" : "Guess The Number",
     "cssFile": "guessNumber.css",
-    "jsFile": "guessNumber.js",
-    "description" : "Essaye de deviner le nombre caché entre 1 et 100 ! Chaque tentative te dira si le nombre secret est plus grand ou plus petit. Peux-tu trouver le bon nombre en un minimum d'essais ?"
+    "description" : "Essaye de deviner le nombre caché entre 1 et 100 ! Chaque tentative te dira si le nombre secret est plus grand ou plus petit. Peux-tu trouver le bon nombre en un minimum d'essais ?",
+    "miniature" : "/images/GN.png"
   },
   {
     "name": "diceRoller",
-    "title": "Dice Roller",
+    "titleCss": "Dice Roller | Jeu du Lanceur de Dés",
+"title": "Dice Roller",
     "cssFile": "diceRoller.css",
-    "jsFile": "diceRoller.js",
-    "description" : "Lance les dés et découvre ton score ! Parfait pour les jeux de société, les RPG, ou juste pour le plaisir. Peux-tu obtenir le score le plus élevé ?"
+    "description" : "Lance les dés et découvre ton score ! Parfait pour les jeux de société, les RPG, ou juste pour le plaisir. Peux-tu obtenir le score le plus élevé ?",
+    "miniature" : "/images/DR.png"
   },
   {
-    "name": "invader",
-    "title": "Invader",
-    "cssFile": "invader.css",
-    "jsFile": "invader.js",
-    "description" : "Crée tes propres œuvres en pixel art ! Utilise ce tableau pour dessiner et donner vie à tes idées pixel par pixel. Amuse-toi et sois créatif !"
+    "name": "pixelize",
+    "titleCss": "Pixelize | Pixel Art",
+    "title": "Pixelize",
+    "cssFile": "pixelize.css",
+    "description" : "Crée tes propres œuvres en pixel art ! Utilise ce tableau pour dessiner et donner vie à tes idées pixel par pixel. Amuse-toi et sois créatif !",
+    "miniature" : "/images/PZ.png"
   }
 ]
 
