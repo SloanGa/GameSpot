@@ -4,7 +4,7 @@
         "titleCss": "Guess The Number | Devinette",
         "title": "Guess The Number",
         "cssFile": "guessNumber.css",
-        "description": "Essaye de deviner le nombre caché ! Chaque tentative te dira si le nombre secret est plus grand ou plus petit. Peux-tu trouver le bon nombre en un minimum d'essais ?",
+        "description": "Essaye de deviner le nombre caché entre 1 et 100 ! Chaque tentative te dira si le nombre secret est plus grand ou plus petit. Peux-tu trouver le bon nombre en un minimum d'essais ?",
         "miniature": "/images/GN.png"
     },
     {
