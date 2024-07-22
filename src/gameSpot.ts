@@ -14,9 +14,13 @@ import { createManageErrors } from "./middlewares/errors.middleware";
 import games from "./models/games.json";
 import router from "./routes/routes";
 
-app.set("views", join(__dirname.replace(/\\dist$/, ""), "views"));
+// app.set("views", join(__dirname.replace(/\\dist$/, ""), "views"));
+app.set("views", join(__dirname, "..", "views"));
 app.set("view engine", "ejs");
 app.use(express.static(join(__dirname.replace(/\\dist$/, ""), "public")));
+app.use(express.static(join(__dirname, "..", "public")));
+console.log(join(__dirname, "..", "public"));
+
 // app.use(logging);
 
 const locals = createLocals(app, games);
@@ -25,6 +29,8 @@ app.use(router);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
+  console.log(join(__dirname, "..", "public"));
+  app.use(express.static(join(__dirname.replace(/\\dist$/, ""), "public")));
 });
 
 const manageErrors = createManageErrors(app);
