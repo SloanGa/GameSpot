@@ -4,9 +4,15 @@ body {
   background: #f0f0f0;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header__title {
   text-align: center;
-  padding: 20px;
+  padding-top: 20px;
   font-size: 3rem;
 }
 
@@ -20,20 +26,26 @@ body {
   margin: auto;
   border-radius: 3px;
   min-height: 700px;
-  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-top: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.img_logo {
+  width: 150px;
+  width: 150px;
 }
 
 .main__title {
   text-align: center;
-  padding: 20px;
+  padding: 40px 0 20px 0;
   font-size: 2rem;
 }
 
 .cards {
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
+  margin-top: 30px;
   perspective: 1000px;
 }
 
@@ -42,7 +54,6 @@ body {
   transition: transform 0.6s ease-in-out 0.1s;
   transform-style: preserve-3d;
   color: black;
-  border: 1px solid rgba(0, 0, 0, 0.151);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
   height: 400px;
@@ -59,7 +70,6 @@ body {
   transform: rotateY(180deg);
   text-align: center;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.151);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -90,17 +100,21 @@ body {
   margin-top: 15px;
   border-radius: 7px;
 }
-.diceRollerCard {
+.diceRollerBackCard {
   background: rgb(243, 156, 18);
   background: linear-gradient(90deg, rgba(243, 156, 18, 1) 38%, rgba(230, 126, 34, 1) 58%);
 }
 
-.pixelizeCard {
+.pixelizeBackCard {
   background: #6459cd;
 }
 
-.guessNumberCard {
+.guessNumberBackCard {
   background: #a1a1a1;
+}
+
+.game_title {
+  font-size: 1.2rem;
 }
 
 .description {
@@ -110,6 +124,11 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .img_logo {
+    width: 100px;
+    width: 100px;
+  }
+
   .cards {
     flex-direction: column;
     align-items: center;

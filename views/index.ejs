@@ -7,27 +7,31 @@
   <title class="">SpotGames</title>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
+  <link rel="manifest" href="/favico/site.webmanifest">
 </head>
 
 <body>
   <div class="container">
     <header class="header">
       <h1 class="header__title"><a class="header__link" href="/">SpotGames</a></h1>
-      </nav>
+      <img src="/images/logo.png" class="img_logo" alt="">
     </header>
 
     <main class="main">
       <h2 class="main__title">Nos Jeux</h2>
       <div class="cards">
         <% games.forEach((game)=> { %>
-        <a class="card" href="/game/<%= game.name %>">
+        <a class="card <%=game.name%>InnerCard" href="/game/<%= game.name %>">
           <div class="innerCard">
-            <h3>
+            <h3 class="game_title">
               <%= game.title %>
             </h3>
             <img class="card__img" src="<%= game.miniature %>" alt="">
           </div>
-          <div class="flip-card-back <%=game.name%>Card">
+          <div class="flip-card-back <%=game.name%>BackCard">
             <p class="description"><%= game.description %></p>
           </div>
         </a>

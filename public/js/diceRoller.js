@@ -74,10 +74,10 @@ const displayScore = () => {
     const score1 = scorePlayer.reduce((acc, n) => acc + n);
     const score2 = scoreDealer.reduce((acc, n) => acc + n);
 
-    if (score1 > score2) {
+    if (score1 < score2) {
       countR++;
       scoreR.textContent = countR;
-    } else if (score1 < score2) {
+    } else if (score1 > score2) {
       countL++;
       scoreL.textContent = countL;
     }
