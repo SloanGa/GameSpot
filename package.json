@@ -5,9 +5,9 @@
   "main": "./dist/gameSpot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/gameSpot.js",
-    "dev" :  "nodemon",
-    "build": "tsc"
+    "start": "node ./dist/gameSpot.js ",
+    "dev" :  "nodemon ./dist/gameSpot.js",
+    "build": "tsc -w"
   },
   "keywords": [],
   "author": "",
