@@ -33,7 +33,7 @@ body {
 
 .img_logo {
   width: 150px;
-  width: 150px;
+  height: 150px;
 }
 
 .main__title {
@@ -126,7 +126,7 @@ body {
 @media screen and (max-width: 900px) {
   .img_logo {
     width: 100px;
-    width: 100px;
+    height: 100px;
   }
 
   .cards {
