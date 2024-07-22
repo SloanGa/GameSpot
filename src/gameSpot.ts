@@ -1,7 +1,11 @@
 import express from "express";
 import { join } from "path";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // import { logging } from "./middlewares/logging.middleware";
 import { createLocals } from "./middlewares/locals.middleware";
@@ -19,8 +23,8 @@ const locals = createLocals(app, games);
 app.use(locals);
 app.use(router);
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
 
 const manageErrors = createManageErrors(app);
