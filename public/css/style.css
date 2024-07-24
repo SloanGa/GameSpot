@@ -106,11 +106,15 @@ body {
 }
 
 .pixelizeBackCard {
-  background: #6459cd;
+  background: #97d1f7;
 }
 
 .guessNumberBackCard {
-  background: #a1a1a1;
+  background: #f1f3f4;
+}
+
+.guessNumberBackCard .description {
+  color: #868686;
 }
 
 .game_title {
@@ -118,9 +122,23 @@ body {
 }
 
 .description {
+  font-weight: bold;
+  text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 40% 8px;
   color: rgb(255, 255, 255);
   line-height: 1.4;
+}
+
+@media screen and (max-width: 1500px) {
+  .main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 900px) {

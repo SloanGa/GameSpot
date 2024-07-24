@@ -85,6 +85,12 @@ submit.addEventListener("click", () => {
   guessNumber();
 });
 
+inputNumber.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    guessNumber();
+  }
+});
+
 const guessNumber = () => {
   const subtmitHandler = () => {
     // console.log(randomNumber);
